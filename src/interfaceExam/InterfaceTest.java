@@ -1,7 +1,5 @@
 package interfaceExam;
 
-import java.io.InputStreamReader;
-
 public class InterfaceTest implements InterfaceA, InterfaceB {
 
 	@Override
@@ -15,7 +13,6 @@ public class InterfaceTest implements InterfaceA, InterfaceB {
 		t.test();
 		//t.m1();
 		InterfaceB.m1();
-		InputStreamReader ir;
 		int[] iarr = new int[4];
 		iarr[4] = 10;
 		System.out.println(iarr[4]);
