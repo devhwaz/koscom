@@ -11,9 +11,9 @@ public class IOExam5 {
 		FileOutputStream fos = new FileOutputStream("byteFile.txt",false);
 		FileInputStream fis = new FileInputStream("src/day07/io/IOExam.java");
 		byte[] barr = new byte[512];
-		while((bt = fis.read()) != -1) {
+		while((bt = fis.read(barr)) != -1) {
 			count++;
-			fos.write(bt);
+			fos.write(barr,0,bt);
 		}
 		System.out.println(count);
 		fos.close();
