@@ -13,7 +13,7 @@ public class DataOut {
 		
 		dos.writeBoolean(false);
 		dos.writeByte(Byte.MAX_VALUE);
-		dos.writeChar('ÀÚ');
+		dos.writeChar('A');
 		dos.writeDouble(Double.MAX_VALUE);
 		dos.writeFloat(Float.MAX_VALUE);
 		dos.writeLong(Long.MAX_VALUE);
