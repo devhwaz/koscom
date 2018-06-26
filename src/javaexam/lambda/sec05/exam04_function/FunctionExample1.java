@@ -10,6 +10,7 @@ public class FunctionExample1 {
 		new Student("홍길동", 90, 96),
 		new Student("신용권", 95, 93)
 	);
+	
 
 	// Function은 파라미터를 받아들여 어떤 작업을 수행한 후 결과를 리턴하는
 	// R apply(T t); 메소드를 가진다.
@@ -31,6 +32,10 @@ public class FunctionExample1 {
 	}
 	
 	public static void main(String[] args) {
+		Function<Student, String> f = t -> t.getName();
+		System.out.println(f.apply(new Student("kang", 100, 100)));
+		
+//		list.add(new Student("kang", 100, 100));
 		System.out.println("[학생 이름]");
 		printString( t -> t.getName() );
 		
