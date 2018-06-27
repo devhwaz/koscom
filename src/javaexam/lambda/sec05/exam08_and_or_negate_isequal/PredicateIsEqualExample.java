@@ -19,7 +19,11 @@ public class PredicateIsEqualExample {
 		System.out.println("Java8, Java8: " + predicate.test("Java8"));
 		
 		predicate = Predicate.isEqual("Java8");
-		System.out.println("Java7, Java8: " + predicate.test("Java7"));
-		
+		System.out.println("Java7, Java8: " + predicate.test("Java7"));	
+		Predicate<Book> p = Predicate.isEqual(new Book());
+		System.out.println(p.test(new Book()));
 	}
+}
+class Book{
+	
 }
