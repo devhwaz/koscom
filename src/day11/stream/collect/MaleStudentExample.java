@@ -9,10 +9,19 @@ public class MaleStudentExample {
 				new Student("홍길동", 10, Student.Sex.MALE),
 				new Student("김수애", 6, Student.Sex.FEMALE),
 				new Student("신용권", 10, Student.Sex.MALE),
+				new Student("홍길동", 10, Student.Sex.MALE),
+				new Student("김수애", 6, Student.Sex.FEMALE),
+				new Student("신용권", 10, Student.Sex.MALE),
+				new Student("홍길동", 10, Student.Sex.MALE),
+				new Student("김수애", 6, Student.Sex.FEMALE),
+				new Student("신용권", 10, Student.Sex.MALE),
+				new Student("홍길동", 10, Student.Sex.MALE),
+				new Student("김수애", 6, Student.Sex.FEMALE),
+				new Student("신용권", 10, Student.Sex.MALE),
 				new Student("박수미", 6, Student.Sex.FEMALE)
 		);
 		
-		MaleStudent maleStudent = totalList.stream()
+		MaleStudent maleStudent = totalList.parallelStream()
 				.filter(s -> s.getSex() == Student.Sex.MALE)
 				//.collect(MaleStudent :: new, MaleStudent :: accumulate, MaleStudent :: combine); 
 				.collect(()->new MaleStudent(), (r, t)->r.accumulate(t), (r1, r2)->r1.combine(r2));

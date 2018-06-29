@@ -6,7 +6,7 @@ import java.util.List;
 public class SequencialVsParallelExample {
 	//요소 처리
 	public static void work(int value) {
-		try { Thread.sleep(100); } catch (InterruptedException e) {}
+		//try { Thread.sleep(1); } catch (InterruptedException e) {}
 	}
 
 	//순차 처리

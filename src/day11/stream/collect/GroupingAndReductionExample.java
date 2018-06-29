@@ -27,7 +27,8 @@ public class GroupingAndReductionExample {
 		// 성별로 쉼표로 구분된 이름을 저장하는 Map 얻기
 		Map<Student.Sex, String> mapByName = totalList.stream()
 				.collect(
-				Collectors.groupingBy(Student::getSex, Collectors.mapping(Student::getName, Collectors.joining(","))));
+				Collectors.groupingBy(Student::getSex, 
+						Collectors.mapping(Student::getName, Collectors.joining(","))));
 		System.out.println("남학생 전체 이름: " + mapByName.get(Student.Sex.MALE));
 		System.out.println("여학생 전체 이름: " + mapByName.get(Student.Sex.FEMALE));
 	}

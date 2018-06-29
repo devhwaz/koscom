@@ -6,7 +6,20 @@ public class Member {
 	private String name;
 	private int sex;
 	private int age;
+	private int score;
+	public Member(String name, int score) {
+		this.name = name;
+		this.score = score;
+	}
 	
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
 	public Member(String name, int sex, int age) {
 		this.name = name;
 		this.sex=sex;

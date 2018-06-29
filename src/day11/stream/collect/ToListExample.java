@@ -29,7 +29,8 @@ public class ToListExample {
 				.filter(s -> s.getSex() == Student.Sex.FEMALE)
 				//.collect(Collectors.toCollection(HashSet :: new));
 				//.collect( Collectors.toCollection(()->{return new HashSet<Student>();}) );
-				.collect( Collectors.toCollection(()->new HashSet<Student>()) );
+				//.collect( Collectors.toCollection(()->new HashSet<Student>()) );
+				.collect( Collectors.toSet() );
 		femaleSet.stream()
 			.forEach(s -> System.out.println(s.getName()));
 	}
